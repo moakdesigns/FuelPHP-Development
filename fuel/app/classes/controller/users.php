@@ -1,8 +1,5 @@
 <?php
-
-namespace Users;
-
-class Controller\Users extends \Controller{
+class Controller\Users extends Controller_Template{
 
 	public function action_index()
 	{
@@ -26,9 +23,7 @@ class Controller\Users extends \Controller{
 		$this->template->content = View::forge('users/view', $data);
 
 	}
-//TODO[\\s]*?:+(?P<todo>.*)$ - test task
 
-	// @update needed
 	public function action_create()
 	{
 		if (Input::method() == 'POST')
