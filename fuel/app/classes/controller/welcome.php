@@ -19,10 +19,7 @@
  * @package  app
  * @extends  Controller
  */
-
-namespace Controller;
-
-class Welcome extends \Controller
+class Controller_Welcome extends Controller
 {
 
 	/**
@@ -33,7 +30,7 @@ class Welcome extends \Controller
 	 */
 	public function action_index()
 	{
-		return \Response::forge(\View::forge('welcome/index'));
+		return Response::forge(View::forge('welcome/index'));
 	}
 
 	/**
@@ -45,7 +42,7 @@ class Welcome extends \Controller
 	 */
 	public function action_hello()
 	{
-		return \Response::forge(\ViewModel::forge('welcome/hello'));
+		return Response::forge(ViewModel::forge('welcome/hello'));
 	}
 
 	/**
@@ -56,6 +53,6 @@ class Welcome extends \Controller
 	 */
 	public function action_404()
 	{
-		return \Response::forge(\ViewModel::forge('welcome/404'), 404);
+		return Response::forge(ViewModel::forge('welcome/404'), 404);
 	}
 }
