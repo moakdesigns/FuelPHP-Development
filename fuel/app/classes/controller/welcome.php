@@ -19,7 +19,10 @@
  * @package  app
  * @extends  Controller
  */
-class Controller_Welcome extends Controller
+
+namespace Controller;
+
+class Welcome extends \Controller
 {
 
 	/**
@@ -30,7 +33,7 @@ class Controller_Welcome extends Controller
 	 */
 	public function action_index()
 	{
-		return Response::forge(View::forge('welcome/index'));
+		return \Response::forge(\View::forge('welcome/index'));
 	}
 
 	/**
