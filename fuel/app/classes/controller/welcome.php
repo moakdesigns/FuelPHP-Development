@@ -20,7 +20,7 @@
  * @extends  Controller
  */
 
-namespace Controller;
+namespace Fuel\Core;
 
 class Welcome extends \Controller
 {
@@ -33,7 +33,7 @@ class Welcome extends \Controller
 	 */
 	public function action_index()
 	{
-		return \Response::forge(\View::forge('welcome/index'));
+		return Response::forge(View::forge('welcome/index'));
 	}
 
 	/**

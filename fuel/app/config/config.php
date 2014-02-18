@@ -239,7 +239,8 @@ return array(
 	 */
 	 'module_paths' => array(
 	 	APPPATH.'modules'.DS,
-	 	APPPATH.'modules'.DS.'user'.DS,
+	 	//APPPATH.'modules'.DS.'user'.DS,
+	 	APPPATH.'modules'.DS.'globalmods'.DS,		// path to global modules
 	 ),
 
 	/**

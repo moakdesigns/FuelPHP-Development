@@ -1,8 +1,6 @@
 <?php
 
-namespace User;
-
-class Admin extends \Controller_Base
+class Controller_Admin extends Controller_Base
 {
 	public $template = 'admin/template';
 

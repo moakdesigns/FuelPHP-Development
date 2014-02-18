@@ -1,7 +1,5 @@
 <?php
 
-namespace User\Admin;
-
 class Users extends Controller\Admin{
 
 	public function action_index()
