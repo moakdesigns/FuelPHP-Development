@@ -3,7 +3,7 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8/develop
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2014 Fuel Development Team
@@ -211,7 +211,7 @@ return array(
 	/**
 	 * Controller class prefix
 	 */
-	 // 'controller_prefix' => 'Controller_',
+	 'controller_prefix' => 'Controller\\',
 
 	/**
 	 * Routing settings
@@ -237,9 +237,9 @@ return array(
 	 *
 	 * Paths MUST end with a directory separator (the DS constant)!
 	 */
-	// 'module_paths' => array(
-	// 	//APPPATH.'modules'.DS
-	// ),
+	 'module_paths' => array(
+	 	APPPATH.'modules'.DS
+	 ),
 
 	/**
 	 * To enable you to split up your additions to the framework, packages are
@@ -257,7 +257,7 @@ return array(
 	/**************************************************************************/
 	/* Always Load                                                            */
 	/**************************************************************************/
-	// 'always_load'  => array(
+	 'always_load'  => array(
 
 		/**
 		 * These packages are loaded on Fuel's startup.
@@ -270,9 +270,10 @@ return array(
 		 *     array('auth'	=> PKGPATH.'auth/')
 		 * );
 		 */
-		// 'packages'  => array(
-		// 	//'orm',
-		// ),
+		 'packages'  => array(
+		 	'orm',
+			'auth',
+		 ),
 
 		/**
 		 * These modules are always loaded on Fuel's startup. You can specify them
@@ -282,7 +283,7 @@ return array(
 		 *
 		 * A path must be set in module_paths for this to work.
 		 */
-		// 'modules'  => array(),
+		 'modules'  => array(),
 
 		/**
 		 * Classes to autoload & initialize even when not used
@@ -308,6 +309,6 @@ return array(
 		 * If you don't want the lang in a group use null as groupname.
 		 */
 		// 'language'  => array(),
-	// ),
+	 ),
 
 );
