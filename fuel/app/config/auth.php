@@ -5,7 +5,7 @@
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8/develop
  * @author     Fuel Development Team
  * @license    MIT License
  * @copyright  2010 - 2014 Fuel Development Team
@@ -22,8 +22,8 @@
  */
 
 return array(
-	'driver' => 'Simpleauth',
+	'driver' => 'Ormauth',
 	'verify_multiple_logins' => false,
-	'salt' => 'put_your_salt_here',
+	'salt' => '$y8jeoE3n07k$C3m7r@',
 	'iterations' => 10000,
 );
