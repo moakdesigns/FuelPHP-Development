@@ -27,14 +27,8 @@ class Controller_Admin_Users extends Controller_Admin{
 			if ($val->run())
 			{
 				$user = Model_User::forge(array(
-					'username' => Input::post('username'),
-					'password' => Input::post('password'),
-					'group_id' => Input::post('group_id'),
-					'email' => Input::post('email'),
-					'last_login' => Input::post('last_login'),
-					'previous_login' => Input::post('previous_login'),
-					'login_hash' => Input::post('login_hash'),
-					'user_id' => Input::post('user_id'),
+					'first_name' => Input::post('first_name'),
+					'last_name' => Input::post('last_name'),
 				));
 
 				if ($user and $user->save())
@@ -67,14 +61,8 @@ class Controller_Admin_Users extends Controller_Admin{
 
 		if ($val->run())
 		{
-			$user->username = Input::post('username');
-			$user->password = Input::post('password');
-			$user->group_id = Input::post('group_id');
-			$user->email = Input::post('email');
-			$user->last_login = Input::post('last_login');
-			$user->previous_login = Input::post('previous_login');
-			$user->login_hash = Input::post('login_hash');
-			$user->user_id = Input::post('user_id');
+			$user->first_name = Input::post('first_name');
+			$user->last_name = Input::post('last_name');
 
 			if ($user->save())
 			{
@@ -93,14 +81,8 @@ class Controller_Admin_Users extends Controller_Admin{
 		{
 			if (Input::method() == 'POST')
 			{
-				$user->username = $val->validated('username');
-				$user->password = $val->validated('password');
-				$user->group_id = $val->validated('group_id');
-				$user->email = $val->validated('email');
-				$user->last_login = $val->validated('last_login');
-				$user->previous_login = $val->validated('previous_login');
-				$user->login_hash = $val->validated('login_hash');
-				$user->user_id = $val->validated('user_id');
+				$user->first_name = $val->validated('first_name');
+				$user->last_name = $val->validated('last_name');
 
 				Session::set_flash('error', $val->error());
 			}

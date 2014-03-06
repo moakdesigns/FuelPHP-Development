@@ -8,14 +8,8 @@ class Create_users
 	{
 		\DBUtil::create_table('users', array(
 			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
-			'username' => array('constraint' => 50, 'type' => 'varchar'),
-			'password' => array('constraint' => 255, 'type' => 'varchar'),
-			'group_id' => array('constraint' => 11, 'type' => 'int'),
-			'email' => array('constraint' => 255, 'type' => 'varchar'),
-			'last_login' => array('constraint' => 25, 'type' => 'varchar'),
-			'previous_login' => array('constraint' => 25, 'type' => 'varchar'),
-			'login_hash' => array('constraint' => 255, 'type' => 'varchar'),
-			'user_id' => array('constraint' => 11, 'type' => 'int'),
+			'first_name' => array('constraint' => 255, 'type' => 'varchar'),
+			'last_name' => array('constraint' => 255, 'type' => 'varchar'),
 			'created_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
