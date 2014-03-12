@@ -6,6 +6,6 @@
 <p>
 	<strong>Message:</strong>
 	<?php echo $message->message; ?></p>
-
+<p><?php echo Html::anchor('comments/create/' . $message->id, 'Add new comment'); ?></p>	<!-- display 'add comment' link -->
 <?php echo Html::anchor('messages/edit/'.$message->id, 'Edit'); ?> |
 <?php echo Html::anchor('messages', 'Back'); ?>

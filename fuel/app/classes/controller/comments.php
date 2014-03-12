@@ -21,6 +21,18 @@ class Controller_Comments extends Controller_Template
 						'comment' => Input::post('comment'),
 						'message_id' => Input::post('message_id'),
 				));
+				
+				// $comment is now an object that has info 
+				// try and save the comment
+				if ($comment and $comment->save())
+				{
+						Session::set_flash('success', 'Added comment #' . $comment->id . '.');
+						Response::redirect('messages/view/' . $comment->message_id);
+				}
+				else
+				{
+						Session::set_flash('error', 'Could not save comment.');
+				}
 		}
 		else
 		{
